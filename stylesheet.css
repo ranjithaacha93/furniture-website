@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+/* ========================= */
+/* <!---------navbar---------> */
+
+.nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    /* backdrop-filter: blur(10px); */
+    background-color: whitesmoke;
+}
+
+.navA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navA a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.navA a:hover{
+    transform: translateY(-8px);
+    transition: 0.9s;
+}
+
+.navA a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    border-bottom: 2px solid red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.9s;
+}
+
+.navA a:hover::after{
+    width: 100%;
+}
+
+.nav input{
+    display: none;
+}
+
+#aacha{
+    display: none;
+    font-size: 20px;
+}
+
+#click:checked ~ .navA{
+    left: -100%;
+    transition: 1s;
+}
+
+@media screen and (max-width:980px) and (min-width:320px) {
+    .navA{
+        position: fixed;
+        background-color:lightgray; 
+        width: 100%;
+        height: 45vh;
+        top: 80px;
+        left: 0%;
+        padding:30px 20px;
+        border-radius: 10px;
+        margin: 0;
+        transition: 0.4s;
+        z-index: 999;
+        flex-direction: column;
+    }
+    #aacha{
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+}
+
+/* ================================= */
+/* <!-----------homediv--------1--------> */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image:url(./images/WhatsApp\ Image\ 2025-01-24\ at\ 23.11.03_518928b8.jpg) ;
+    border-bottom-left-radius: 20% 35%;
+    padding: 20px;
+    position: relative;
+}
+
+.home h1{
+    color: white;
+    text-align: center;
+    margin-top: 15%;
+    font-size:45px;
+}
+
+.home p{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.home button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 130px;
+    height: 5vh;
+}
+
+@media screen and (max-width:850px) and (min-width:320px) {
+    .home h1{
+        font-size: 35px;
+        margin-top: 20%;
+    }
+    .home p{
+        font-size: 13px;
+    }
+    .home button{
+        left: 40%;
+    }
+}
+
+/* =============================== */
+/* <!----serivcediv-----2-------- */
+
+.serivce{
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.serivce div{
+    width: 300px;
+    height: 180px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    animation: serivce 1s linear;
+    animation-timeline: view();
+    animation-range: -10% cover 20%;
+    box-shadow: 3px 3px 6px black;
+}
+
+@keyframes serivce {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 0.1s;
+    }
+}
+
+.serivce div p{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.serivce div a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width:980px) and (min-width:650px) {
+    .serivce{
+        /* flex-direction: column; */
+        padding: 20px;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px) and (min-width:320px) {
+    .serivce{
+        padding: 20px;
+        row-gap: 20px;
+    }
+    .serivce div{
+        width: 270px;
+        height: 170px;
+    }
+}
+
+/* ============================== */
+/* <!--------projectdiv-------3------> */
+
+.project{
+    width: 100%;
+    min-height: 80vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectleft{
+    width: 50%;
+    height: 80vh;
+    padding: 65px 35px 50px 70px;
+}
+
+.projectright{
+    width: 50%;
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectleft h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.projectleft p{
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.projectleft div{
+    margin-top: 20px;
+}
+
+.projectleft div i{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.projectleft div span{
+    margin-left: 10px;
+}
+
+.projectright img{
+    width: 450px;
+    height: 460px;
+    border-radius: 0 30% 0 20%;
+}
+
+@media screen and (max-width:980px) and (min-width:700px) {
+    .projectright img{
+        width: 350px;
+        height: 350px;
+    }
+    .projectleft{
+        padding-left: 35px;
+    }
+    .projectleft h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:700px) and (min-width:500px) {
+    .project{
+        flex-direction: column;
+    }
+    .projectleft{
+        width: 100%;
+        height: 65vh;
+    }
+    .projectright{
+        width: 100%;
+    }
+    .projectright img{
+        width: 450px;
+        height: 450px;
+    }
+    .projectleft{
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .project{
+        flex-direction: column;
+    }
+    .projectleft{
+        width: 100%;
+        height: 40vh;
+    }
+    .projectright{
+        width: 100%;
+    }
+    .projectright img{
+        width: 300px;
+        height: 300px;
+    }
+    .projectleft{
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+    .projectleft h1{
+        font-size: 23px;
+    }
+    .projectleft p{
+        font-size: 15px;
+    }
+    .projectleft div span{
+        font-size: 14px;
+    }
+}
+
+/* ================================ */
+/* <!-----numbersdiv--------4---------> */
+
+.num{
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: lightslategray;
+}
+
+.num1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.num1 div h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.num1 div{
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .num1 div h1{
+        font-size: 20px;
+    }
+    .num1 div p{
+        font-size: 13px;
+    }
+}
+
+/* ============================= */
+/* <!--------imgagediv------5------> */
+
+.image{
+    width: 100%;
+    min-height: 130vh;
+    padding: 30px;
+}
+
+.imgh1{
+    text-align: center;
+    color:chocolate;
+}
+
+.imgp{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.top{
+    width: 100%;
+    height: 65vh;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.bottom{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.img1{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20% 0 0 0;
+    margin-bottom: 20px;
+}
+
+.img2{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 20% 0 0;
+    margin-bottom: 20px;
+}
+
+
+.top div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top div div i{
+    background-color: lightgray;
+    padding: 10px 12px 10px 12px;
+    border-radius: 50%;
+}
+
+.img3{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 0 0 20%;
+    margin-bottom: 20px;
+}
+
+.img4{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 0 20% 0;
+    margin-bottom: 20px;
+}
+
+
+.bottom div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom div div i{
+    background-color: lightgray;
+    padding: 10px 12px 10px 12px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:720px) and (min-width:500px) {
+    .img1{
+        width: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .img2{
+        width: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .img3{
+        width: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .img4{
+        width: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .top div div h3{
+        font-size: 12px;
+    }
+    .bottom div div h3{
+        font-size: 12px;
+    }
+    .bottom{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .imgh1{
+        font-size: 20px;
+    }
+    .imgp{
+        font-size: 13px;
+    }
+    .img1{
+        width: 150px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .img2{
+        width: 150px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .img3{
+        width: 150px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .img4{
+        width: 150px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .top div div h3{
+        font-size: 10px;
+    }
+    .bottom div div h3{
+        font-size: 10px;
+    }
+    .top{
+        gap: 20px;
+    }
+    .bottom{
+        gap: 20px;
+        height: 30vh;
+    }
+}
+
+/* =============================== */
+/* <!------pepoldiv------6------> */
+
+.pepol{
+    width: 100%;
+    min-height: 70vh;
+    background-color:lightblue;
+    padding: 20px;
+}
+
+.pepol h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.pepolflex{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.peploflex1{
+    width: 350px;
+    height: 230px;
+    background-color:whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.peploflex1 div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.peploflex1 div img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.peploflex1 p{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .peploflex1 p{
+        font-size: 13px;
+    }
+}
+
+/* ================================= */
+/* <!------tablediv-------7-------> */
+
+.table{
+    width: 100%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.table h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.table p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tableflex{
+    width: 100%;
+    min-height: 70vh;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tableflex div{
+    width: 280px;
+    height: 400px;
+}
+
+.txt1{
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30% 0 0 0 ;
+}
+
+.txt2{
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.txt3{
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0 30% 0 0 ;
+}
+
+.tableflex div h2{
+    margin-top: 20px;
+}
+
+.tableflex div h5{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:600px) and (min-width:320px) {
+    .table p{
+        font-size: 13px;
+    }
+    .tableflex div h2{
+        font-size: 16px;
+    }
+}
+
+/* =================================== */
+/* <!----------contactdiv------8---------> */
+
+.contact{
+    width: 100%;
+    min-height: 85vh;
+    background-color: whitesmoke;
+}
+
+.contacttop{
+    width: 100%;
+    height: 30vh;
+    padding: 20px;
+    background-color: white;
+}
+
+.contactbottom{
+    width: 100%;
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contacttop h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.contacttop p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contacttop div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contacttop div button{
+    width: 130px;
+    height: 6vh;
+    background-color: rgb(26, 26, 109);
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.contactbottom div h2{
+    color: chocolate;
+}
+
+.contactbottom div p{
+    margin-top: 20px;
+}
+
+.contactbottom div i{
+    margin-right: 20px;
+    font-size: 25px;
+    margin-top: 20px;
+}
